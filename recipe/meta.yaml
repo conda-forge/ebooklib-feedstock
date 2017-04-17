@@ -1,8 +1,8 @@
 {%set name = "ebooklib" %}
 {%set camelName = "EbookLib" %}
-{%set version = "0.15" %}
+{%set version = "0.16" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "cba18893047b27cdc516ba61e05b76da5f087a3c3dd69c3121dda415fd3e9be1" %}
+{%set hash_val = "c6b565009f450b9c610cf009b59d85d43e6c2d6fdf7d0d1c578e03ee37c32f1a" %}
 
 package:
   name: {{ name }}
