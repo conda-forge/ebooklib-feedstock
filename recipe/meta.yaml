@@ -1,9 +1,7 @@
 {% set name = "EbookLib" %}
-{% set version = "0.16" %}
+{% set version = "0.17" %} 
 {% set compress_type = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "c6b565009f450b9c610cf009b59d85d43e6c2d6fdf7d0d1c578e03ee37c32f1a" %}
-{% set build = 1 %}
+{% set hash = "c4fd1af2fb15f2b82b3d8cc70b33a6735a16c77bbea8d92eba2b22448ced604e" %}
 
 package:
   name: {{ name|lower }}
@@ -12,19 +10,17 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
-  number: {{ build }}
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
     - pip
     - python
-    - setuptools
-
   run:
     - python
     - lxml
